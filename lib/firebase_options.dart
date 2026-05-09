@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBBZqU_1muCTfISZJNZe1IVEdfDUUOF7RQ',
-    appId: '1:1073542511419:android:ffecae2f6684d94538951e',
+    appId: '1:1073542511419:android:c0d5e58dfd55826438951e',
     messagingSenderId: '1073542511419',
     projectId: 'pontual-sempre',
     storageBucket: 'pontual-sempre.firebasestorage.app',
@@ -59,20 +59,20 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyBWDFZ7g51_jN7UiqyHy8f-pNNMds5mQNo',
-    appId: '1:1073542511419:ios:31e3661bc532881338951e',
+    appId: '1:1073542511419:ios:66afc981ba837b5b38951e',
     messagingSenderId: '1073542511419',
     projectId: 'pontual-sempre',
     storageBucket: 'pontual-sempre.firebasestorage.app',
-    iosBundleId: 'com.example.pontual',
+    iosBundleId: 'com.salles.pontual',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyBWDFZ7g51_jN7UiqyHy8f-pNNMds5mQNo',
-    appId: '1:1073542511419:ios:31e3661bc532881338951e',
+    appId: '1:1073542511419:ios:66afc981ba837b5b38951e',
     messagingSenderId: '1073542511419',
     projectId: 'pontual-sempre',
     storageBucket: 'pontual-sempre.firebasestorage.app',
-    iosBundleId: 'com.example.pontual',
+    iosBundleId: 'com.salles.pontual',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(

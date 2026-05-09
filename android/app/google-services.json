@@ -7,12 +7,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1073542511419:android:ffecae2f6684d94538951e",
+        "mobilesdk_app_id": "1:1073542511419:android:c0d5e58dfd55826438951e",
         "android_client_info": {
-          "package_name": "com.example.pontual"
+          "package_name": "com.salles.pontual"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1073542511419-3p1dt30v0duupausm4qobs5sjtrvslv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBBZqU_1muCTfISZJNZe1IVEdfDUUOF7RQ"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073542511419-3p1dt30v0duupausm4qobs5sjtrvslv5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1073542511419-6vja6mo8rhc4nj6c3si9r67o314tassi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.salles.pontual"
+              }
+            }
+          ]
         }
       }
     }
