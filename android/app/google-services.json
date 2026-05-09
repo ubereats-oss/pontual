@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1073542511419",
+    "project_id": "pontual-sempre",
+    "storage_bucket": "pontual-sempre.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073542511419:android:ffecae2f6684d94538951e",
+        "android_client_info": {
+          "package_name": "com.example.pontual"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBZqU_1muCTfISZJNZe1IVEdfDUUOF7RQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
