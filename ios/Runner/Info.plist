@@ -51,6 +51,8 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>O Pontual usa seu GPS para confirmar se voce esta no local correto antes de bater ponto.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>O Pontual usa seu GPS para confirmar se voce esta no local correto antes de bater ponto.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
