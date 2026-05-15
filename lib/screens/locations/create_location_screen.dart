@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
+import 'package:geolocator/geolocator.dart';
+
 import '../../core/theme/app_theme.dart';
 import '../../providers/auth_provider.dart';
 import '../../services/location_security_service.dart';
@@ -31,6 +33,7 @@ class _CreateLocationScreenState extends State<CreateLocationScreen> {
   }
 
   Future<void> _create() async {
+    FocusScope.of(context).unfocus();
     if (!_formKey.currentState!.validate()) return;
 
     final user = context.read<AuthProvider>().user;
@@ -64,11 +67,35 @@ class _CreateLocationScreenState extends State<CreateLocationScreen> {
         ),
       );
       if (mounted) Navigator.of(context).pop();
+    } on LocationSecurityException catch (error) {
+      if (!mounted) return;
+      final isBlocked = error.message.contains('bloqueada');
+      await showDialog<void>(
+        context: context,
+        builder: (_) => AlertDialog(
+          title: const Text('Permissão de localização'),
+          content: Text(error.message),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Fechar'),
+            ),
+            if (isBlocked)
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  Geolocator.openAppSettings();
+                },
+                child: const Text('Abrir Configurações'),
+              ),
+          ],
+        ),
+      );
     } on Object catch (error) {
       if (!mounted) return;
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text(error.toString())));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(error.toString()), duration: const Duration(seconds: 6)),
+      );
     } finally {
       if (mounted) setState(() => _loading = false);
     }
