@@ -42,16 +42,22 @@ class PontualApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Pontual',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.light,
-      home: firebaseReady
-          ? ChangeNotifierProvider(
-              create: (_) => AuthProvider(),
-              child: const AuthGate(),
-            )
-          : FirebaseSetupScreen(error: firebaseError),
+    if (!firebaseReady) {
+      return MaterialApp(
+        title: 'Pontual',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.light,
+        home: FirebaseSetupScreen(error: firebaseError),
+      );
+    }
+    return ChangeNotifierProvider(
+      create: (_) => AuthProvider(),
+      child: MaterialApp(
+        title: 'Pontual',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.light,
+        home: const AuthGate(),
+      ),
     );
   }
 }
